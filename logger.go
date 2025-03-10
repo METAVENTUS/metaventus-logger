@@ -22,7 +22,7 @@ func InitLogger() {
 	consoleWriter := zerolog.ConsoleWriter{Out: os.Stderr, TimeFormat: time.RFC3339, NoColor: true}
 
 	// Exemple de configuration pour un environnement de production
-	env := os.Getenv("GIN_MODE")
+	env := os.Getenv("SERVICE_MODE")
 	switch env {
 	case "release":
 		multiWriter = consoleWriter
